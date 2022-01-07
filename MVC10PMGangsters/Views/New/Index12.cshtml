@@ -1,0 +1,46 @@
+﻿@model MVC10PMGangsters.Models.EmpDept
+@{
+    ViewBag.Title = "Index12";
+}
+
+<h2>Index12</h2>
+
+
+<table class="table table-striped table-condensed table-responsive">
+
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+
+    @foreach (var item in Model.emp)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+
+</table>
+
+
+<table class="table table-striped table-condensed table-responsive">
+
+    <tr>
+        <th>DeptId</th>
+        <th>DeptName</th>
+        <th>Head</th>
+    </tr>
+
+    @foreach (var item in Model.dept)
+    {
+        <tr>
+            <td>@item.DeptId</td>
+            <td>@item.DeptName</td>
+            <td>@item.Head</td>
+        </tr>
+    }
+
+</table>

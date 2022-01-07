@@ -13,11 +13,26 @@ namespace MVC10PMGangsters
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();//Enable Attribute based Routing 
+
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                name: "Default1",
+                url: "PistaHouse/Cake",
+                defaults: new { controller = "New", action = "Index3", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+               name: "Default2",
+               url: "Agra/TajMahal",
+               defaults: new { controller = "New", action = "Index3", id = UrlParameter.Optional }
+           );
+
+
+            routes.MapRoute(
+   name: "Default",
+   url: "{controller}/{action}/{id}",
+   defaults: new { controller = "New", action = "Index3", id = UrlParameter.Optional }
+);
         }
     }
 }

@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index9";
+}
+
+<h2>Index9</h2>
+<table class="table table-responsive table-bordered table-striped">
+
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>EmpSalary</th>
+    </tr>
+
+    @foreach (var item in ViewBag.employee)
+    {
+        <tr>
+            <td>@item.EmpId123    </td>
+            <td>@item.EmpName  </td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+
+</table>
+

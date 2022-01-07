@@ -1,0 +1,25 @@
+﻿@model  List<MVC10PMGangsters.Models.EmployeeModel>
+@{
+    ViewBag.Title = "Index11";
+}
+
+<h2>Index11</h2>
+
+<table class="table table-striped table-condensed table-responsive">
+
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Salary</th>
+</tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmpId</td>
+            <td>@item.EmpName</td>
+            <td>@item.EmpSalary</td>
+        </tr>
+    }
+
+</table>

@@ -9,7 +9,7 @@ namespace MVC10PMGangsters.Controllers
 {
     public class NewController : Controller
     {
-        // GET: New/index/1211?Name=suresh&Designation=Tester&Department=ECE
+        // GET: New/index/1212?Name=suresh&Designation=Tester&Department=ECE
         public string Index(string id,string Name,string Designation)
         {
             return "Hi My Id is "+id+" ,Name is "+Name+" My Designation "+Designation;

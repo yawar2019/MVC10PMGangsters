@@ -130,7 +130,7 @@ namespace MVC10PMGangsters.Controllers
             return View(listEmp);
         }
 
-        public ActionResult Index12()
+        public ViewResult Index12()
         {
             List<EmployeeModel> listEmp = new List<EmployeeModel>();
 
@@ -185,6 +185,11 @@ namespace MVC10PMGangsters.Controllers
             return View(Emodel);
         }
 
+        public ActionResult getmeView()
+        {
+            // return View("Index12");
+            return RedirectToAction("Index12");
+        }
     }
 }
 

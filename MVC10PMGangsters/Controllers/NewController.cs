@@ -185,11 +185,63 @@ namespace MVC10PMGangsters.Controllers
             return View(Emodel);
         }
 
-        public ActionResult getmeView()
+        public RedirectToRouteResult getmeView()
         {
             // return View("Index12");
-            return RedirectToAction("Index12");
+            return RedirectToAction("Index","Default",new {id=1211 });
         }
+
+        public RedirectToRouteResult getmeView2()
+        {
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Suresh";
+            emp1.EmpSalary = 673839;
+
+            // return View("Index12");
+            return RedirectToAction("Index2", "Default", emp1);
+        }
+
+        public RedirectToRouteResult getmeView3()
+        {
+            List<EmployeeModel> listEmp = new List<EmployeeModel>();
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Kiran";
+            emp.EmpSalary = 34567;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Suresh";
+            emp1.EmpSalary = 673839;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Asha";
+            emp2.EmpSalary = 74567;
+
+
+            listEmp.Add(emp);
+            listEmp.Add(emp1);
+            listEmp.Add(emp2);
+
+            // return View("Index12");
+            return RedirectToAction("Index3", "Default", listEmp);
+        }
+
+        public RedirectResult RedirectIndex12()
+        {
+            return Redirect("http://www.google.com");
+        }
+
+        public ActionResult GetAnotherControllerView()
+        {
+            return View("~/Views/Default/index.cshtml");
+        }
+
+
+
+
     }
 }
 

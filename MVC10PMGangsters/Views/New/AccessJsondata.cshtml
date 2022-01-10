@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "AccessJsondata";
+}
+
+<h2>AccessJsondata</h2>
+
+<table id="table1">
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+</table>
+
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $.ajax({
+        url:"http://localhost:51622/new/getJsonData",
+        dataType: "json",
+        type: "GET",
+        success: function (result)
+        {
+            $.each(result, function (index, Key) {
+
+                $("#table1 tr:last").after("<tr><td>" + Key.EmpId + "</td><td>" + Key.EmpName + "</td><td>" + Key.EmpSalary + "</td></tr>")
+
+
+            })
+
+        }
+
+
+    })
+    </script>

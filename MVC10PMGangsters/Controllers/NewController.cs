@@ -199,7 +199,7 @@ namespace MVC10PMGangsters.Controllers
             emp1.EmpSalary = 673839;
 
             // return View("Index12");
-            return RedirectToAction("Index2", "Default", emp1);
+            return RedirectToAction("Index12");
         }
 
         public RedirectToRouteResult getmeView3()
@@ -233,16 +233,80 @@ namespace MVC10PMGangsters.Controllers
         {
             return Redirect("http://www.google.com");
         }
-
+        public RedirectResult RedirectIndex13()
+        {
+            return Redirect("~/new/Index12");
+        }
         public ActionResult GetAnotherControllerView()
         {
             return View("~/Views/Default/index.cshtml");
         }
 
+        public FileResult GetFile()
+        {
+            return File("~/Web.config","text/plain");
+        }
+
+        public FileResult GetFileinXml()
+        {
+            return File("~/ActionResult.pdf", " application/pdf");
+        }
+
+        public FileResult downloadFile()
+        {
+            return File("~/ActionResult.pdf", " application/pdf", "ActionResult.pdf");
+        }
+
+        public ViewResult AccessJsondata()
+        {
+            return View();
+        }
+        public JsonResult getJsonData()
+        {
+            List<EmployeeModel> listEmp = new List<EmployeeModel>();
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Kiran";
+            emp.EmpSalary = 34567;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Suresh";
+            emp1.EmpSalary = 673839;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Asha";
+            emp2.EmpSalary = 74567;
 
 
+            listEmp.Add(emp);
+            listEmp.Add(emp1);
+            listEmp.Add(emp2);
 
+            return Json(listEmp, JsonRequestBehavior.AllowGet);
+
+        }
     }
 }
 
 //yawarali17@gmail.com
+
+//<username>
+//    <user>tiger</user>
+//    </userName>
+
+
+//{
+//    {
+//"userName":"kiran",
+//"salary":78292
+
+//},
+
+// {
+//"userName":"kiran",
+//"salary":78292
+
+//},
+//}

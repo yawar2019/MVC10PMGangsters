@@ -287,6 +287,22 @@ namespace MVC10PMGangsters.Controllers
             return Json(listEmp, JsonRequestBehavior.AllowGet);
 
         }
+
+        public ContentResult GetContentData(int ? id)
+        {
+            if (id==1)
+            {
+                return Content("Hello World");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style=color:blue>Hello World</p>");
+            }
+            else
+            {
+                return Content("<script>alert('hello world')</script>");
+            }
+        }
     }
 }
 

@@ -20,5 +20,23 @@ namespace DapperEmple.Controllers
             List<EmployeeModel> _listEmp = con.Query<EmployeeModel>("select * FROM [Employee].[dbo].[employeeDetails]").ToList();
             return View(_listEmp);
         }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(EmployeeModel emp)
+        {
+            var param = new DynamicParameters();
+            param.Add("@EmpName", emp.EmpName);
+            param.Add("@EmpSalary", emp.EmpSalary);
+
+            int i= con.Execute("sp_CreateEmployee", param:param,commandType:CommandType.StoredProcedure);
+            if (i > 0)
+                return RedirectToAction("Index");
+            return View();
+        }
     }
 }

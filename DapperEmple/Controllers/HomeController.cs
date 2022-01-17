@@ -26,6 +26,8 @@ namespace DapperEmple.Controllers
         {
             return View();
         }
+
+
         [HttpPost]
         public ActionResult Create(EmployeeModel emp)
         {
@@ -34,6 +36,31 @@ namespace DapperEmple.Controllers
             param.Add("@EmpSalary", emp.EmpSalary);
 
             int i= con.Execute("sp_CreateEmployee", param:param,commandType:CommandType.StoredProcedure);
+            if (i > 0)
+                return RedirectToAction("Index");
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@EmpId", id);
+
+            var Emp = con.QuerySingle<EmployeeModel>("sp_getNeerjaEmployeeDetailsById",param:param, commandType: CommandType.StoredProcedure);
+
+            return View(Emp);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(EmployeeModel emp)
+        {
+            var param = new DynamicParameters();
+            param.Add("@EmpId", emp.EmpId);
+            param.Add("@EmpName", emp.EmpName);
+            param.Add("@EmpSalary", emp.EmpSalary);
+
+            int i = con.Execute("sp_UpdateNeerjaEmployees", param: param, commandType: CommandType.StoredProcedure);
             if (i > 0)
                 return RedirectToAction("Index");
             return View();

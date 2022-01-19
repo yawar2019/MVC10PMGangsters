@@ -169,6 +169,10 @@
     <Content Include="Views\New\Index12.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\New\AccessJsondata.cshtml" />
+    <Content Include="Views\Shared\_StudentPartialView.cshtml" />
+    <Content Include="Views\New\GetPartialView.cshtml" />
+    <Content Include="Views\New\GetPartialViewExample2.cshtml" />
+    <Content Include="Views\Shared\_EmployeeListPartialView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

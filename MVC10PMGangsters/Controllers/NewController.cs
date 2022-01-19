@@ -303,8 +303,47 @@ namespace MVC10PMGangsters.Controllers
                 return Content("<script>alert('hello world')</script>");
             }
         }
+
+        public ActionResult GetPartialView()
+        {
+            return View();
+        }
+
+        public ActionResult GetPartialViewExample2()
+        {
+            List<EmployeeModel> listEmp = new List<EmployeeModel>();
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Kiran";
+            emp.EmpSalary = 34567;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 2;
+            emp1.EmpName = "Suresh";
+            emp1.EmpSalary = 673839;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Asha";
+            emp2.EmpSalary = 74567;
+
+
+            listEmp.Add(emp);
+            listEmp.Add(emp1);
+            listEmp.Add(emp2);
+
+            return View(listEmp);
+        }
     }
 }
+
+
+
+///Partial View in Asp.net mvc is a special view which renders in other portion View
+///// it need to be created inside Shared Folder because it is a shared able Resource
+//Partial View can display static data and Dynamic data
+//To Render PArtial we need to use @Html.Partial() Method and @Html.RenderPartial()
+// 
 
 //yawarali17@gmail.com
 

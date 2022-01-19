@@ -1,0 +1,17 @@
+﻿
+@model  List<MVC10PMGangsters.Models.EmployeeModel>
+ 
+
+ 
+@{
+    int a = 100, b = 20;
+    var s = Html.Partial("_EmployeeListPartialView", Model);
+    if (b > a)
+    {
+        @s
+    }
+        } @*Render and Return MvcHtml string as return type*@
+@{
+   Html.RenderPartial("_EmployeeListPartialView", Model);} @*Render then page return type void *@
+
+

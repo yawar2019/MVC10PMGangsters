@@ -22,8 +22,15 @@
             <td>@item.EmpSalary</td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = @item.EmpId }, new { @class = "btn btn-primary" })
-           @Html.ActionLink("Delete","Delete",new { id = @item.EmpId },new {@class="btn btn-danger"})
+                @Html.ActionLink("Delete", "Delete", new { id = @item.EmpId }, new { @class = "btn btn-danger" })
             </td>
         </tr>
     }
 </table>
+
+@section mySection
+    {
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+}

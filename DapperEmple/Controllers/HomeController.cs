@@ -65,7 +65,29 @@ namespace DapperEmple.Controllers
                 return RedirectToAction("Index");
             return View();
         }
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@EmpId", id);
 
+            var Emp = con.QuerySingle<EmployeeModel>("sp_getNeerjaEmployeeDetailsById", param: param, commandType: CommandType.StoredProcedure);
+
+            return View(Emp);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            var param = new DynamicParameters();
+            param.Add("@EmpId", id);
+
+            int i = con.Execute("sp_RajaDeleteEmployee", param: param, commandType: CommandType.StoredProcedure);
+            if (i > 0)
+                return RedirectToAction("Index");
+            return View();
+        }
 
     }
 }

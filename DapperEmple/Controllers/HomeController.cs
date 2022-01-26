@@ -89,5 +89,12 @@ namespace DapperEmple.Controllers
             return View();
         }
 
+        public ViewResult HtmlHelperExample()
+        {
+
+            return View();
+
+        }
+
     }
 }

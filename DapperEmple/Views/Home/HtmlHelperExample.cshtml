@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+<form>
+    <label>FirsName</label>
+    <input type="text" id="firstName" name="FirstName" value="Asha" style="background-color:black;color:white;" class="form-control" onclick="fun()" />
+</form>
+
+@using (Html.BeginForm())
+{ 
+    @Html.Label("LastName")
+    @Html.TextBox("lstname",null,new { style = "background-color:skyblue" , @class="form-control" ,onclick = "fun()",id="lstName" })
+    @Html.RadioButton("Gender", "Male",true)<span>Male</span>
+    @Html.RadioButton("Gender","FeMale")<span>FeMale</span>
+
+}
+
+
+<script>
+    function fun()
+    {
+        var a = document.getElementById('lstName').value;
+        alert(a);
+
+    }
+</script>

@@ -11,6 +11,7 @@ namespace DapperEmple.Models
         public int EmpId { get; set; }
         [Display(Name ="Employee Name")]
         public string EmpName { get; set; }
+        //[ScaffoldColumn(false)]
         public int EmpSalary { get; set; }
 
     }

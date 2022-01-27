@@ -91,8 +91,9 @@ namespace DapperEmple.Controllers
 
         public ViewResult HtmlHelperExample()
         {
-
-            return View();
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpName = "Srikanth";
+            return View(emp);
 
         }
 

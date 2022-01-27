@@ -1,4 +1,4 @@
-﻿
+﻿@model DapperEmple.Models.EmployeeModel
 @{
     ViewBag.Title = "HtmlHelperExample";
 }
@@ -16,7 +16,21 @@
     @Html.TextBox("lstname",null,new { style = "background-color:skyblue" , @class="form-control" ,onclick = "fun()",id="lstName" })
     @Html.RadioButton("Gender", "Male",true)<span>Male</span>
     @Html.RadioButton("Gender","FeMale")<span>FeMale</span>
+    <br />
+    @Html.LabelFor(s => s.EmpName)
+    @Html.TextBoxFor(s=>s.EmpName)
 
+    <br />
+    @Html.CheckBox("cbJava", true)<span>java</span>
+    @Html.CheckBox("cbDotnet",true)<span>dotnet</span>
+
+    @Html.DropDownList("Country",new List<SelectListItem>()
+{
+    new SelectListItem {Text="Select Country",Value="0"},
+new SelectListItem {Text="India",Value="1" },
+new SelectListItem {Text="US",Value="2" },
+new SelectListItem {Text="London",Value="3" }
+})
 }
 
 

@@ -93,14 +93,29 @@ namespace DapperEmple.Controllers
         {
             EmployeeModel emp = new EmployeeModel();
             emp.EmpName = "Srikanth";
+            List<EmployeeModel> _listEmp = con.Query<EmployeeModel>("select * FROM [Employee].[dbo].[employeeDetails]").ToList();
+            ViewBag.Employees = new SelectList(_listEmp, "EmpId", "EmpName",59033);
+
             return View(emp);
 
         }
-        public ViewResult HtmlHelperExample2()
+        public ViewResult RegistrationPage()
         {
-            EmployeeModel emp = new EmployeeModel();
-            emp.EmpName = "Srikanth";
-            return View(emp);
+            List<EmployeeModel> _listEmp = con.Query<EmployeeModel>("select * FROM [Employee].[dbo].[employeeDetails]").ToList();
+
+            ViewBag.Employees = new SelectList(_listEmp, "EmpId", "EmpName",59033);
+
+            return View();
+
+        }
+        [HttpPost]
+        public ViewResult RegistrationPage(EmployeeModel emp)
+        {
+            List<EmployeeModel> _listEmp = con.Query<EmployeeModel>("select * FROM [Employee].[dbo].[employeeDetails]").ToList();
+
+            ViewBag.Employees = new SelectList(_listEmp, "EmpId", "EmpName", 59033);
+            ViewBag.EmployeeInfo = emp;
+            return View();
 
         }
 

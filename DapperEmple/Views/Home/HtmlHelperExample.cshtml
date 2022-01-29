@@ -33,6 +33,9 @@ new SelectListItem {Text="London",Value="3" }
 })
 }
 
+@Html.DropDownList("Employees")
+@Html.DropDownList("Emp",(IEnumerable<SelectListItem>)ViewBag.Employees,"Select Employee")
+
 
 <script>
     function fun()

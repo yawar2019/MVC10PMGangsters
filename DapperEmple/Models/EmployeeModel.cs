@@ -14,5 +14,20 @@ namespace DapperEmple.Models
         //[ScaffoldColumn(false)]
         public int EmpSalary { get; set; }
 
+        public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
+
+        public string Managers { get; set; }
+        public string EmailId { get; set; }
+
+        public string Gender { get; set; }
+
+        public string Address { get; set; }
+        public bool agreement { get; set; }
+
+
     }
+
+
+
 }

@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "RegistrationPage";
+}
+
+<h2>RegistrationPage</h2>
+@using(Html.BeginForm())
+{
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label("EmpName")
+    </div>
+
+    <div class="col-md-10">
+        @Html.TextBox("EmpName",null, new { @class = "form-control" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label("Password")
+    </div>
+
+    <div class="col-md-10">
+        @Html.Password("Password",null, new { @class = "form-control" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label("Confirm Password")
+    </div>
+
+    <div class="col-md-10">
+        @Html.Password("ConfirmPassword", null,new {@class="form-control" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label("Gender")
+    </div>
+
+    <div class="col-md-10">
+        @Html.RadioButton("Gender", "Male", true)<span>Male</span>
+        @Html.RadioButton("Gender", "FeMale")<span>Female</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label("Managers")
+    </div>
+
+    <div class="col-md-10">
+@Html.DropDownList("Managers", (IEnumerable<SelectListItem>)ViewBag.Employees, "Select Employee",new { @class = "form-control" })
+     
+        </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label("Address")
+    </div>
+
+    <div class="col-md-10">
+        @Html.TextArea("Address",null,10,10, new {@class= "form-control" })
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label("Accept Agreement")
+    </div>
+
+    <div class="col-md-10">
+        @Html.CheckBox("agreement")
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-10">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+</div>
+}
+
+
+
+
+@if (ViewBag.EmployeeInfo != null)
+{
+    <span>EmployeeName</span> @ViewBag.EmployeeInfo.EmpName<br />
+    <span>Password</span> @ViewBag.EmployeeInfo.Password<br />
+    <span>ConfirmPassword</span> @ViewBag.EmployeeInfo.ConfirmPassword<br />
+    <span>Address</span> @ViewBag.EmployeeInfo.Address<br />
+    <span>Manager</span> @ViewBag.EmployeeInfo.Managers<br />
+   <span>Manager</span> @ViewBag.EmployeeInfo.agreement<br />
+
+}

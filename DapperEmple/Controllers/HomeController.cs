@@ -119,5 +119,21 @@ namespace DapperEmple.Controllers
 
         }
 
+
+        public ViewResult ValidationPage()
+        {
+            
+            return View();
+
+        }
+
+        [HttpPost]
+        public ViewResult ValidationPage(EmployeeModel emp)
+        {
+
+            return View();
+
+        }
+
     }
 }

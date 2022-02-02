@@ -128,10 +128,17 @@ namespace DapperEmple.Controllers
         }
 
         [HttpPost]
-        public ViewResult ValidationPage(EmployeeModel emp)
+        public ActionResult ValidationPage(EmployeeModel emp)
         {
+            if (ModelState.IsValid) {
+                return Redirect("~/Home/ValidationPage");    //code  valid 
+            }
+            else
+            {
+                //code invalid 
+                return View(emp);
 
-            return View();
+            }
 
         }
 

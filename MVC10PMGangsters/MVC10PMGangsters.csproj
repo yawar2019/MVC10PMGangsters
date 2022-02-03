@@ -144,6 +144,7 @@
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="MyCustomFilter\MyFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +174,7 @@
     <Content Include="Views\New\GetPartialView.cshtml" />
     <Content Include="Views\New\GetPartialViewExample2.cshtml" />
     <Content Include="Views\Shared\_EmployeeListPartialView.cshtml" />
+    <Content Include="Views\Default\CricketPremi.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

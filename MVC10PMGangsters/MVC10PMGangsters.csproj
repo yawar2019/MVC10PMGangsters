@@ -230,6 +230,8 @@
     <Content Include="Views\Default\CricketPremi.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\DashBoard.cshtml" />
+    <Content Include="Views\Login\AboutUs.cshtml" />
+    <Content Include="Views\Login\ContactUS.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

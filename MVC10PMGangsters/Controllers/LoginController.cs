@@ -33,14 +33,14 @@ namespace MVC10PMGangsters.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin,Manager")]//prema
         public ActionResult DashBoard()
         {
             return View();
         }
 
 
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="Admin")]//prema
         public ActionResult ContactUS()
         {
             return View();
@@ -48,7 +48,7 @@ namespace MVC10PMGangsters.Controllers
 
 
 
-        [Authorize(Roles="Manager")]
+        [Authorize(Roles="Manager")]//nitish
         public ActionResult AboutUs()
         {
             return View();

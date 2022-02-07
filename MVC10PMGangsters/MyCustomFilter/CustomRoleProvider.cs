@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC10PMGangsters.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -48,7 +49,23 @@ namespace MVC10PMGangsters.MyCustomFilter
 
         public override string[] GetRolesForUser(string username)
         {
-            //
+            LoginEntities db = new LoginEntities();
+
+            var userroles = (from user in db.UserDetails
+
+
+                             join rolemapping in db.UserRoleMappings
+
+
+                             on user.UserId equals rolemapping.EmpId//nitish,prema
+
+
+                             join role in db.Roles
+                             on rolemapping.RoleId equals role.id//1,2
+
+                             where user.UserName == username//nitish
+                             select role.RoleName).ToArray();
+            return userroles;
         }
 
         public override string[] GetUsersInRole(string roleName)

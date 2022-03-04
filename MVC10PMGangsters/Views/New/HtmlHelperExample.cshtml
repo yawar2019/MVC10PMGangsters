@@ -1,0 +1,105 @@
+﻿@model MVC10PMGangsters.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+<style>
+    .form-control {
+    background-color:navajowhite;
+    }
+</style>
+
+<script>
+    function fun()
+    {
+        alert("Tollywood hero Suresh babu");
+    }
+</script>
+<form>
+    <input type="hidden" id="myuser" name="myuser" value="" />
+<input type="text" name="EmpName" id="EmpName" value="Firasath" class="form-control" onclick="fun()" />
+@Html.TextBox("Firstname","Tiger",new {@class="form-control",id="fstNme", onclick = "fun()" })@*///loosly type controls*@
+
+@Html.TextBox("fileupload", null, new { type="file" })@*///loosly type controls*@
+<br />
+@Html.Password("Pwd","9876")
+<br />
+<span>Male</span>@Html.RadioButton("Gender","Male",true)
+<span>FeMale</span>@Html.RadioButton("Gender", "FeMale")
+<span>Java</span>@Html.CheckBox("Java", true)
+<span>PHP</span>@Html.CheckBox("PHP")
+<br />
+<br />
+
+@Html.DropDownList("Country",new List<SelectListItem>() {
+
+    new SelectListItem {Text="India",Value="1" },
+    new SelectListItem {Text="Russia",Value="2" },
+    new SelectListItem {Text="Ukraine",Value="3",Selected=true }
+
+},"Select Country")
+
+
+@Html.TextArea("address", "Telangana",10,14, new { })
+@Html.DropDownList("Users");
+
+
+
+
+</form>
+<script src="~/scripts/jquery-1.10.2.js"></script>
+<script>
+
+    $('#Users').on("change", function () {
+
+       alert($('#Users option:selected').text());
+       $('#myuser').val($('#Users option:selected').text());
+    })
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@Html.TextBoxFor(s=>s.EmpName,new {@class="form-control" })@*//strongly type Html Control*@
+@Html.Editor("LastName")
+@Html.EditorFor(s=>s.EmpId)
+

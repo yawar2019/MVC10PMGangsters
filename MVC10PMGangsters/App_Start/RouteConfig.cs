@@ -31,7 +31,7 @@ namespace MVC10PMGangsters
             routes.MapRoute(
    name: "Default",
    url: "{controller}/{action}/{id}",
-   defaults: new { controller = "New", action = "Index3", id = UrlParameter.Optional }
+   defaults: new { controller = "New", action = "HtmlHelperExample", id = UrlParameter.Optional }
 );
         }
     }

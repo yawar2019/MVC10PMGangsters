@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "dropdownlistExample";
+}
+
+<h2>dropdownlistExample</h2>
+
+@Html.DropDownList("Users");
+
+UserID:   <input type="text" name="UserId" id="UserId" value="" />
+UserName: <input type="text" name="UserName" id="UserName" value="" />
+
+<script src="~/scripts/jquery-1.10.2.js"></script>
+<script>
+
+    $('#Users').on("change", function () {
+
+       //alert($('#Users option:selected').val());
+        //$('#myuser').val($('#Users option:selected').text());
+
+
+
+        var UserId = $('#Users option:selected').val();
+
+       $.ajax({
+           url: 'http://localhost:51622/New/SelectedUseResult',
+           type: 'GET',
+           dataType: 'json',
+           data: { 'UserId': UserId },
+           success: function (result) {
+               $('#UserId').val(result[0].UserId);
+               $('#UserName').val(result[0].UserName);
+           }
+           
+
+       })
+
+
+    })
+
+
+</script>

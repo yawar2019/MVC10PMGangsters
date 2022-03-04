@@ -232,6 +232,8 @@
     <Content Include="Views\Login\DashBoard.cshtml" />
     <Content Include="Views\Login\AboutUs.cshtml" />
     <Content Include="Views\Login\ContactUS.cshtml" />
+    <Content Include="Views\New\HtmlHelperExample.cshtml" />
+    <Content Include="Views\New\dropdownlistExample.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

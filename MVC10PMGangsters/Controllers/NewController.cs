@@ -334,6 +334,29 @@ namespace MVC10PMGangsters.Controllers
 
             return View(listEmp);
         }
+
+        public ActionResult HtmlHelperExample()
+        {
+            LoginEntities db = new LoginEntities();
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpName = "Ramya";
+            ViewBag.Users = new SelectList(db.UserDetails, "UserId", "UserName");
+            return View(emp);
+        }
+
+        public ActionResult dropdownlistExample()
+        {
+            LoginEntities db = new LoginEntities();            
+            ViewBag.Users = new SelectList(db.UserDetails, "UserId", "UserName");
+            return View();
+        }
+
+        public ActionResult SelectedUseResult(int? UserId)
+        {
+            LoginEntities db = new LoginEntities();
+            var result= db.UserDetails.Where(s => s.UserId == UserId);
+            return Json(result,JsonRequestBehavior.AllowGet);
+        }
     }
 }
 

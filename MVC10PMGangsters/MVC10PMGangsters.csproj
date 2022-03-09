@@ -158,6 +158,11 @@
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -166,6 +171,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NewController.cs" />
+    <Compile Include="CustomControl\MyUserControl.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,6 +193,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Models\Role.cs">
       <DependentUpon>LoginModel.tt</DependentUpon>
     </Compile>
@@ -234,6 +241,7 @@
     <Content Include="Views\Login\ContactUS.cshtml" />
     <Content Include="Views\New\HtmlHelperExample.cshtml" />
     <Content Include="Views\New\dropdownlistExample.cshtml" />
+    <Content Include="Views\New\ValidationExample.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

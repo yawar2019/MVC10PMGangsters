@@ -357,6 +357,21 @@ namespace MVC10PMGangsters.Controllers
             var result= db.UserDetails.Where(s => s.UserId == UserId);
             return Json(result,JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult ValidationExample()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ValidationExample(RegistrationModel reg)
+        {
+            if (ModelState.IsValid)
+            {
+                //
+            }
+
+            return View();
+        }
     }
 }
 

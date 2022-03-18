@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandleErrorAttributeExample", "HandleErrorAttributeExample\HandleErrorAttributeExample.csproj", "{7C2E3375-3F4E-4F09-B2C9-E672158CAC96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetExample", "AdoNetExample\AdoNetExample.csproj", "{110ED840-0F1B-4E89-8AB2-09B7C8BF0127}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DE60776D-EF5E-49FB-BE19-D5DADEE93A93} = {DE60776D-EF5E-49FB-BE19-D5DADEE93A93}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApproach", "DatabaseApproach\DatabaseApproach.csproj", "{5813CD0A-02D6-4E83-9AA3-C3558C2DBA41}"
 EndProject
@@ -24,6 +27,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillingSystem", "BillingSystem\BillingSystem.csproj", "{EB01F10E-FD63-427C-BD4B-62C023F33599}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BundlingAndMinification", "BundlingAndMinification\BundlingAndMinification.csproj", "{CB0D4C0D-0F40-401B-9092-428034E0BA91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{DE60776D-EF5E-49FB-BE19-D5DADEE93A93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceApp", "WcfServiceApp\WcfServiceApp.csproj", "{B64EA0E2-F073-42B6-9EFC-D177B12B20AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +84,18 @@ Global
 		{CB0D4C0D-0F40-401B-9092-428034E0BA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB0D4C0D-0F40-401B-9092-428034E0BA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB0D4C0D-0F40-401B-9092-428034E0BA91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE60776D-EF5E-49FB-BE19-D5DADEE93A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE60776D-EF5E-49FB-BE19-D5DADEE93A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE60776D-EF5E-49FB-BE19-D5DADEE93A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE60776D-EF5E-49FB-BE19-D5DADEE93A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64EA0E2-F073-42B6-9EFC-D177B12B20AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64EA0E2-F073-42B6-9EFC-D177B12B20AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64EA0E2-F073-42B6-9EFC-D177B12B20AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64EA0E2-F073-42B6-9EFC-D177B12B20AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

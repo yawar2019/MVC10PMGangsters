@@ -11,6 +11,19 @@ namespace AdoNetExample.Controllers
     {
         // GET: Home
         EmployeeContext db = new EmployeeContext();
+
+        public ActionResult GetCalcIndex()
+        {
+            ServiceReference1.CaculatorServiceSoapClient obj = new ServiceReference1.CaculatorServiceSoapClient();
+
+            ServiceReference2.MyWcfServiceClient obj1 = new ServiceReference2.MyWcfServiceClient();
+            ServiceReference3.Service1Client sobj = new ServiceReference3.Service1Client("NetTcpBinding_IService1");
+            //return Content(obj.MyCalc(2, 6,2, '*').ToString()+obj1.add(22,55)+"final service "+sobj.add(12,23));
+
+            return Content("final service "+sobj.add(12,23));
+        }
+
+
         public ActionResult Index()
         {
 

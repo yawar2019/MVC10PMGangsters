@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceApp", "WcfService
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inversion Control", "Inversion Control\Inversion Control.csproj", "{F468A9BE-5661-4ACA-85B8-473A8ECAD929}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,6 +98,10 @@ Global
 		{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C1D2DD9-8C01-4E3B-AF6D-11431B54CED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F468A9BE-5661-4ACA-85B8-473A8ECAD929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F468A9BE-5661-4ACA-85B8-473A8ECAD929}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F468A9BE-5661-4ACA-85B8-473A8ECAD929}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F468A9BE-5661-4ACA-85B8-473A8ECAD929}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
